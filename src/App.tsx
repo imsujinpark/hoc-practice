@@ -1,9 +1,9 @@
 import { useState, createContext } from 'react';
 import './App.css';
-import CatList from './components/CatList';
-import DogList from './components/DogList';
-import GrandParent from './components/TheseAreForPractisingHooks/Grandparent';
-import { withSearch } from './components/withSearch';
+import CatList from './hocExamples/CatList';
+import DogList from './hocExamples/DogList';
+import { withSearch } from './hocExamples/withSearch';
+import GrandParent from './hooksExamples/useContextExample/Grandparent';
 
 export const InputContext = createContext({
   input: "",
