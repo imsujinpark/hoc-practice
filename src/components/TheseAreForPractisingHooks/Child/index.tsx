@@ -5,11 +5,17 @@ import { InputContext } from '../../../App';
 const Child: React.FC = () => {
     console.count("Child!");
 
-    const [name, setName] = useContext(InputContext);
+    const {input, setInput} = useContext(InputContext);
+
+    // const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    //     setName -;
+    // }
 
     return (
         <>
             <h2>Child</h2>
+            <span>name</span>
+            <input value={input} />
             <Grandchild />
         </>
     )

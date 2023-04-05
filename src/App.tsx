@@ -5,16 +5,23 @@ import DogList from './components/DogList';
 import GrandParent from './components/TheseAreForPractisingHooks/Grandparent';
 import { withSearch } from './components/withSearch';
 
-export const InputContext = createContext<{name: string, setName: React.Dispatch<React.SetStateAction<string>>}>({});
+export const InputContext = createContext({
+  input: "",
+  setInput: (str: string) => {}
+});
 
 function App() {
-  const [name, setName] = useState("Sujin Park");
+  const [input, setInputValue] = useState("Sujin Park");
 
   const DogListWithSearch = withSearch(DogList);
   const CatListWithSearch = withSearch(CatList);
 
+  const setInput = (value: string) => {
+    setInputValue(value)
+  }
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setName(e.target.value);
+    setInput(e.target.value);
   }
 
   return (
@@ -24,8 +31,8 @@ function App() {
         <CatListWithSearch />
       </div>
       <div className='context-practice'>
-        <input value={name} onChange={handleChange}/>
-        <InputContext.Provider value={{name, setName}}>
+        <input value={input} onChange={handleChange}/>
+        <InputContext.Provider value={{input, setInput}}>
           <GrandParent />
         </InputContext.Provider>
       </div>
