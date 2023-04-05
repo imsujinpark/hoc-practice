@@ -10,17 +10,17 @@ I created an HOC called `withSearch` that wraps around a component that needs a 
 
 ### Where to find the examples
 * `App`
-    * `src/components/withSearch` - HOC
-        * `src/components/DogList`
-            * `src/components/AnimalCard`
-    * `src/components/withSearch` - HOC
-        * `src/components/CatList`
-            * `src/components/AnimalCard`
+    * `src/hocExamples/withSearch` - HOC
+        * `src/hocExamples/DogList`
+            * `src/hocExamples/AnimalCard`
+    * `src/hocExamples/withSearch` - HOC
+        * `src/hocExamples/CatList`
+            * `src/hocExamples/AnimalCard`
 
 ## React Hooks
 
 ### Where to find the examples
-* You can find the files under `src/TheseAreForPractisingHooks`. 
+* You can find the files under `src/hooksExamples`. 
 
 ### Why use `useContext`?
 * I prevented props-drilling via `context` and prevented unnecessary rerender through the usage of `React.memo`.
