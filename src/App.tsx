@@ -11,7 +11,7 @@ export const InputContext = createContext({
 });
 
 function App() {
-  const [input, setInputValue] = useState("Sujin Park");
+  const [input, setInputValue] = useState("");
 
   const DogListWithSearch = withSearch(DogList);
   const CatListWithSearch = withSearch(CatList);

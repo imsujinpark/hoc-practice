@@ -11,4 +11,4 @@ const Parent: React.FC = () => {
     )
 }
 
-export default Parent;
+export default React.memo(Parent);

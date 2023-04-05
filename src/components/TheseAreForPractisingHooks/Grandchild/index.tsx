@@ -7,4 +7,4 @@ const Grandchild: React.FC = () => {
     )
 }
 
-export default Grandchild;
+export default React.memo(Grandchild);

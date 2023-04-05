@@ -11,4 +11,4 @@ const GrandParent: React.FC = () => {
     )
 }
 
-export default GrandParent;
+export default React.memo(GrandParent);

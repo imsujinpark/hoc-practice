@@ -7,15 +7,15 @@ const Child: React.FC = () => {
 
     const {input, setInput} = useContext(InputContext);
 
-    // const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    //     setName -;
-    // }
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setInput(e.target.value);
+      }
 
     return (
         <>
             <h2>Child</h2>
-            <span>name</span>
-            <input value={input} />
+            <input value={input} onChange={handleChange}/>
+            <span>LOOK HERE! {input}</span>
             <Grandchild />
         </>
     )
